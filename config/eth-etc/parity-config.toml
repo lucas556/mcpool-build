@@ -1,0 +1,50 @@
+[parity]
+
+chain = "testnet"
+mode = "active"
+auto_update = "all"
+release_track = "stable"
+base_path = "/nodes/parity"
+db_path = "/nodes/parity/chains"
+keys_path = "/nodes/parity/keys"
+identity = ""
+light = false
+
+[ui]
+disable = false
+
+[dapps]
+disable = true
+
+[ipc]
+disable = true
+
+[network]
+discovery = false
+
+[rpc]
+interface = "0.0.0.0"
+cors = ["32"]
+apis = ["eth,net,web3,personal,parity,parity_pubsub,rpc"]
+port = 8545
+
+[websockets]
+interface = "all"
+port = 8546
+
+[mining]
+author = "0xfe38dcdd68da3cca74b3d33229a7343f9a471192"
+
+[misc]
+log_file = "/nodes/parity/parity.log"
+logging = "info"
+color = true
+
+[footprint]
+db_compaction = "ssd"
+cache_size = 512
+
+[account]
+unlock = ["0xfe38dcdd68da3cca74b3d33229a7343f9a471192"]
+password = ["/nodes/parity/password.md"]
+keys_iterations = 10240
